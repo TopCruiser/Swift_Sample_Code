@@ -9,7 +9,8 @@
 
 #import "MaterialsFormController.h"
 #import "XLForm.h"
-#import "CBUtils.h"
+//#import "CBUtils.h"
+#import <Daily_Log-Swift.h>
 
 @implementation MaterialsFormController {
     XLFormRowDescriptor *item;

@@ -9,7 +9,8 @@
 
 #import "EquipmentRentalFormController.h"
 #import "XLForm.h"
-#import "CBUtils.h"
+//#import "CBUtils.h"
+#import <Daily_Log-Swift.h>
 
 @implementation EquipmentRentalFormController {
     XLFormRowDescriptor *equipment;

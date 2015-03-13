@@ -83,19 +83,27 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         if project != nil
         {
-            var logs = project.objectForKey("data")?.objectForKey("logs") as NSArray!
-            if logs != nil
+            var data = project.objectForKey("data") as NSDictionary!
+            if data != nil
             {
-                return logs.count
+                var logs = data.objectForKey("logos") as NSArray!
+                if logs != nil
+                {
+                        return logs.count
+                }
+            }
+            return 0
+        }
+        else
+        {
+            if projects != nil
+            {
+                return projects.count
             }
             else
             {
                 return 0
             }
-        }
-        else
-        {
-            return projects.count;
         }
     }
 
