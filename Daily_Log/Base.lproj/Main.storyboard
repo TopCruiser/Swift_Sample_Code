@@ -37,7 +37,7 @@
         <!--Master-->
         <scene sceneID="Ck0-TU-UE0">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="WXZ-yL-DtE" customClass="MasterViewController" sceneMemberID="viewController">
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="WXZ-yL-DtE" customClass="MasterViewController" customModule="Daily_Log" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fJC-Bu-nGL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
