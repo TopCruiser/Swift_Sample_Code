@@ -11,19 +11,9 @@ import CoreData
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
-//    @property (strong, nonatomic) DetailViewController *detailViewController;
-//    @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-//    @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
     var detailViewController : DetailViewController!
     var fetchedResultsController : NSFetchedResultsController!
     var managedObjectContext : NSManagedObjectContext!
-    
-//    UIBarButtonItem *addButton;
-//    UIBarButtonItem *backButton;
-//    
-//    NSMutableArray *projects;
-//    NSMutableDictionary *project;
 
     var addButton : UIBarButtonItem!
     var backButton : UIBarButtonItem!
@@ -39,10 +29,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-//        addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed)];
-//        backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(backButtonPressed)];
-//        self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-        
         addButton = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.Add, target: self, action:Selector("addButtonPressed"))
         backButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Reply, target: self, action:Selector("backButtonPressed"));
         detailViewController = self.splitViewController?.viewControllers.last?.topViewController as DetailViewController
@@ -51,8 +37,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        CBDatabase *db = [CBDatabase sharedInstance];
-//        [db fetchProjectsWithCallback:@selector(fetchProjectsCallback:) delegate:self];
         
         var db = CBDatabase.sharedInstance() as CBDatabase!
         db.fetchProjectsWithCallback(Selector("fetchProjectsCallback:"), delegate: self)
@@ -70,16 +54,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if (project) {
-//            NSArray *logs = project[@"data"][@"logs"];
-//            if (logs) {
-//                return logs.count;
-//            } else {
-//                return 0;
-//            }
-//        } else {
-//            return  projects.count;
-//        }
         
         if project != nil
         {
@@ -109,23 +83,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        static NSString *cellIdentifier = @"Cell";
-//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//        if (cell == nil) {
-//            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-//        }
-//
-//        if (project) {
-//            NSArray *logs = project[@"data"][@"logs"];
-//            NSLog(@"%@", logs);
-//            if (logs) {
-//                cell.textLabel.text = [logs objectAtIndex:indexPath.row][@"date"];
-//            }
-//        } else {
-//            NSString *name = [NSString stringWithFormat:@"%@", [projects objectAtIndex:indexPath.row][@"discussion_number"]];
-//            cell.textLabel.text = name;
-//        }
-//        return cell;
         
         let cellIdentifier = "Cell"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell!
@@ -162,18 +119,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if (editingStyle == UITableViewCellEditingStyleDelete) {
-//            NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-//            [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-//            
-//            NSError *error = nil;
-//            if (![context save:&error]) {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-//                abort();
-//            }
-//        }
 
         if editingStyle == .Delete {
             // Delete the row from the data source
@@ -193,14 +138,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.navigationItem.rightBarButtonItem = addButton;
-//        self.navigationItem.leftBarButtonItem = backButton;
-//        if (project) {
-//            
-//        } else {
-//            project = [projects[indexPath.row] mutableCopy];
-//        }
-//        [self.tableView reloadData];
         
         self.navigationItem.rightBarButtonItem = addButton
         self.navigationItem.leftBarButtonItem = backButton
@@ -237,16 +174,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     */
 
     // MARK: - Functions
-    
-//    - (void)backButtonPressed
-//    {
-//    if (project) {
-//    self.navigationItem.leftBarButtonItem = nil;
-//    self.navigationItem.rightBarButtonItem = nil;
-//    project = nil;
-//    [self.tableView reloadData];
-//    }
-//    }
 
     func backButtonPressed()
     {
@@ -259,16 +186,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
     
-//    - (void)addButtonPressed
-//    {
-//    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-//    
-//    [self.detailViewController setLog:@{
-//    @"projectName": project[@"discussion_number"],
-//    }];
-//    [self.detailViewController reloadView];
-//    }
-    
     func addButtonPressed()
     {
         detailViewController = self.splitViewController?.viewControllers.last?.topViewController as DetailViewController
@@ -277,16 +194,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         detailViewController.reloadView()
     }
     
-//    - (void)fetchProjectsCallback:(NSDictionary *)data {
-//    if ([data objectForKey:@"projects"] != nil) {
-//    projects = [[data objectForKey:@"projects"] mutableCopy];
-//    [self.tableView reloadData];
-//    }
-//    
-//    }
-    
-    func fetchProjectsCallback(data : NSDictionary)
+//    func fetchProjectsCallback(data : NSDictionary)
+    func fetchProjectsCallback(timer : NSTimer)
     {
+        var data = timer.userInfo as NSDictionary!
         if data.objectForKey("projects") != nil
         {
             projects = data.objectForKey("projects")?.mutableCopy() as NSMutableArray

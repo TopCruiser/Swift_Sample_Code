@@ -9,12 +9,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-//    CGSize screenSize;
-//    UITextField *loginEmail;
-//    UITextField *loginPassword;
-//    UIButton *loginButton;
-
     var screenSize : CGSize!
     var loginEmail : UITextField!
     var loginPassword : UITextField!
@@ -24,32 +18,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        screenSize = [[UIScreen mainScreen] bounds].size;
-//        self.view.backgroundColor = [CBUtils cloudsColor];
-//        
-//        UILabel *loginLabel = [[UILabel alloc] initWithFrame:CGRectMake(360, 225, 100, 50)];
-//        loginLabel.text = @"Login";
-//        loginLabel.font = [UIFont fontWithName:@"RobotoCondensed-Regular" size:40];
-//        loginLabel.textColor = [CBUtils alizarinColor];
-//        [self.view addSubview:loginLabel];
-//        
-//        loginEmail = [CBUtils paddedTextFieldWithFrame:CGRectMake(360, 285, 300, 40)
-//        andPlaceholder:@"Email"];
-//        [loginEmail setAutocapitalizationType:UITextAutocapitalizationTypeNone];
-//        [self.view addSubview:loginEmail];
-//        
-//        loginPassword = [CBUtils paddedTextFieldWithFrame:CGRectMake(360, 335, 300, 40)
-//        andPlaceholder:@"Password"];
-//        [loginPassword setSecureTextEntry:YES];
-//        [self.view addSubview:loginPassword];
-//        
-//        loginButton = [[UIButton alloc] initWithFrame:CGRectMake(360, 385, 300, 40)];
-//        loginButton.backgroundColor = [CBUtils alizarinColor];
-//        [loginButton setTitle:@"Log In" forState:UIControlStateNormal];
-//        [loginButton addTarget:self action:@selector(loginButtonPress)
-//        forControlEvents:UIControlEventTouchUpInside];
-//        [self.view addSubview:loginButton];
-        
         screenSize = UIScreen.mainScreen().bounds.size;
         self.view.backgroundColor = CBUtils.cloudsColor()
         
@@ -84,14 +52,6 @@ class LoginViewController: UIViewController {
     
     func loginButtonPress()
     {
-//        CBDatabase *db = [CBDatabase sharedInstance];
-//        [db authUserWithEmail:loginEmail.text password:loginPassword.text callback:@selector(loginCallback:) delegate:self];
-//        
-//        CBSpinner *spinner = [CBSpinner sharedSpinner];
-//        [spinner setMessage:@"Logging in..."];
-//        [self.view addSubview:spinner];
-//        
-//        [self.view setUserInteractionEnabled:NO];
         
         var db = CBDatabase.sharedInstance() as CBDatabase!
         db.authUserWithEmail(loginEmail.text, password: loginPassword.text, callback: Selector("loginCallback:"), delegate: self)
@@ -105,20 +65,6 @@ class LoginViewController: UIViewController {
     
     func loginCallback(data : NSDictionary)
     {
-//        CBSpinner *spinner = [CBSpinner sharedSpinner];
-//        [spinner removeFromSuperview];
-//        [self.view setUserInteractionEnabled:YES];
-//        
-//        if ([data[@"status"] intValue] == 200) {
-//        UICKeyChainStore *store = [UICKeyChainStore keyChainStore];
-//        store[@"token"] = data[@"response"][@"token"];
-//        store[@"email"] = loginEmail.text;
-//        [store synchronize];
-//        NSLog(@"%@", store);
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//        } else {
-//        [CBUtils showMessage:@"Your username and password is incorrect" withTitle:@"Error" withDelegate:self];
-//        }
         
         var spinner = CBSpinner.sharedSpinner() as CBSpinner!
         spinner.removeFromSuperview()

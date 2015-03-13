@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		193156B31AB2D29800AC52A6 /* CBSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193156B21AB2D29800AC52A6 /* CBSpinner.swift */; };
+		193156BA1AB32E8300AC52A6 /* CBDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193156B91AB32E8300AC52A6 /* CBDatabase.swift */; };
 		1939E5711AB17BED00367403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939E5701AB17BED00367403 /* AppDelegate.swift */; };
 		1939E5761AB17BED00367403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1939E5741AB17BED00367403 /* Main.storyboard */; };
 		1939E5781AB17BED00367403 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1939E5771AB17BED00367403 /* Images.xcassets */; };
@@ -21,8 +23,6 @@
 		1939E5A61AB1D01700367403 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1939E5A01AB1D01700367403 /* RobotoCondensed-Light.ttf */; };
 		1939E5A71AB1D01700367403 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1939E5A11AB1D01700367403 /* RobotoCondensed-LightItalic.ttf */; };
 		1939E5A81AB1D01700367403 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1939E5A21AB1D01700367403 /* RobotoCondensed-Regular.ttf */; };
-		1939E5AE1AB1D03800367403 /* CBDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1939E5AB1AB1D03800367403 /* CBDatabase.m */; };
-		1939E5AF1AB1D03800367403 /* CBSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 1939E5AD1AB1D03800367403 /* CBSpinner.m */; };
 		1939E5BF1AB1D05300367403 /* EquipmentRentalFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1939E5B21AB1D05300367403 /* EquipmentRentalFormController.m */; };
 		1939E5C01AB1D05300367403 /* EquipmentTimeFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1939E5B41AB1D05300367403 /* EquipmentTimeFormController.m */; };
 		1939E5C11AB1D05300367403 /* ExtraWorkFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1939E5B61AB1D05300367403 /* ExtraWorkFormController.m */; };
@@ -45,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		193156B21AB2D29800AC52A6 /* CBSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBSpinner.swift; path = Singletons/CBSpinner.swift; sourceTree = "<group>"; };
+		193156B91AB32E8300AC52A6 /* CBDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CBDatabase.swift; path = Singletons/CBDatabase.swift; sourceTree = "<group>"; };
 		1939E56B1AB17BED00367403 /* Daily_Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily_Log.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1939E56F1AB17BED00367403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1939E5701AB17BED00367403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,10 +65,6 @@
 		1939E5A01AB1D01700367403 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Light.ttf"; path = "Fonts/RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		1939E5A11AB1D01700367403 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-LightItalic.ttf"; path = "Fonts/RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		1939E5A21AB1D01700367403 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "Fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
-		1939E5AA1AB1D03800367403 /* CBDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBDatabase.h; path = Singletons/CBDatabase.h; sourceTree = "<group>"; };
-		1939E5AB1AB1D03800367403 /* CBDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBDatabase.m; path = Singletons/CBDatabase.m; sourceTree = "<group>"; };
-		1939E5AC1AB1D03800367403 /* CBSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBSpinner.h; path = Singletons/CBSpinner.h; sourceTree = "<group>"; };
-		1939E5AD1AB1D03800367403 /* CBSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBSpinner.m; path = Singletons/CBSpinner.m; sourceTree = "<group>"; };
 		1939E5B11AB1D05300367403 /* EquipmentRentalFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EquipmentRentalFormController.h; path = Forms/EquipmentRentalFormController.h; sourceTree = "<group>"; };
 		1939E5B21AB1D05300367403 /* EquipmentRentalFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EquipmentRentalFormController.m; path = Forms/EquipmentRentalFormController.m; sourceTree = "<group>"; };
 		1939E5B31AB1D05300367403 /* EquipmentTimeFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EquipmentTimeFormController.h; path = Forms/EquipmentTimeFormController.h; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				1939E5C71AB1D20300367403 /* Utils */,
-				1939E5B01AB1D03E00367403 /* Forms */,
 				1939E5A91AB1D01E00367403 /* Singletons */,
 				1939E59C1AB1D00D00367403 /* Fonts */,
 				1939E5701AB17BED00367403 /* AppDelegate.swift */,
@@ -142,6 +139,7 @@
 				1939E5741AB17BED00367403 /* Main.storyboard */,
 				1939E5771AB17BED00367403 /* Images.xcassets */,
 				1939E5791AB17BED00367403 /* LaunchScreen.xib */,
+				1939E5B01AB1D03E00367403 /* Forms */,
 				1939E56E1AB17BED00367403 /* Supporting Files */,
 			);
 			path = Daily_Log;
@@ -190,10 +188,8 @@
 		1939E5A91AB1D01E00367403 /* Singletons */ = {
 			isa = PBXGroup;
 			children = (
-				1939E5AA1AB1D03800367403 /* CBDatabase.h */,
-				1939E5AB1AB1D03800367403 /* CBDatabase.m */,
-				1939E5AC1AB1D03800367403 /* CBSpinner.h */,
-				1939E5AD1AB1D03800367403 /* CBSpinner.m */,
+				193156B91AB32E8300AC52A6 /* CBDatabase.swift */,
+				193156B21AB2D29800AC52A6 /* CBSpinner.swift */,
 			);
 			name = Singletons;
 			sourceTree = "<group>";
@@ -385,14 +381,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1939E5AF1AB1D03800367403 /* CBSpinner.m in Sources */,
 				1939E5C11AB1D05300367403 /* ExtraWorkFormController.m in Sources */,
 				1939E5C21AB1D05300367403 /* MainFormController.m in Sources */,
+				193156BA1AB32E8300AC52A6 /* CBDatabase.swift in Sources */,
 				1939E5711AB17BED00367403 /* AppDelegate.swift in Sources */,
 				1939E5C41AB1D05300367403 /* SideFormController.m in Sources */,
 				1939E5911AB18E9E00367403 /* MasterViewController.swift in Sources */,
-				1939E5AE1AB1D03800367403 /* CBDatabase.m in Sources */,
 				1939E5951AB1915800367403 /* LoginViewController.swift in Sources */,
+				193156B31AB2D29800AC52A6 /* CBSpinner.swift in Sources */,
 				1939E5BF1AB1D05300367403 /* EquipmentRentalFormController.m in Sources */,
 				1939E5931AB1913F00367403 /* DetailViewController.swift in Sources */,
 				1939E5C51AB1D05300367403 /* WorkerCountFormController.m in Sources */,
