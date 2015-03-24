@@ -107,6 +107,7 @@ class CBDatabase: NSObject {
 
             }) { (operation : AFHTTPRequestOperation!, error :NSError!) -> Void in
                 let delay = 0.0
+                println("error = \(error)")
                 NSTimer.scheduledTimerWithTimeInterval(delay, target: delegate, selector: callback, userInfo: ["status" : NSNumber(integer:(operation.response.statusCode)), "response" : error ], repeats: false)
         }
         

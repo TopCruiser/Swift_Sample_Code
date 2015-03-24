@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         var store = UICKeyChainStore() as UICKeyChainStore!
+//        store["token"] = nil
         if store["token"] == nil
         {
             var vc = LoginViewController() as LoginViewController
@@ -100,7 +101,10 @@ class DetailViewController: UIViewController {
             var formValues : NSMutableDictionary = NSMutableDictionary()
             formValues .addEntriesFromDictionary(mainForm.formValues())
             
-            var date = formValues.objectForKey("date") as String
+            var dateValue = formValues.objectForKey("date") as NSDate!
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .MediumStyle
+            var date = dateFormatter.stringFromDate(dateValue)
             formValues.removeObjectForKey("date")
             
             formValues.addEntriesFromDictionary(NSDictionary(object: date, forKey: "date"))
