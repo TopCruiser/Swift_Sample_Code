@@ -119,9 +119,9 @@ class DetailViewController: UIViewController {
 
     }
     
-    func dataSavedCallback(data : NSDictionary)
+    func dataSavedCallback(timer : NSTimer)
     {
-        
+        var data = timer.userInfo as NSDictionary!
         var spinner = CBSpinner.sharedSpinner() as CBSpinner!
         spinner.removeFromSuperview()
         self.view.userInteractionEnabled = true

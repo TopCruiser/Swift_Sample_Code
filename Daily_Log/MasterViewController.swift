@@ -194,7 +194,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         detailViewController.reloadView()
     }
     
-//    func fetchProjectsCallback(data : NSDictionary)
     func fetchProjectsCallback(timer : NSTimer)
     {
         var data = timer.userInfo as NSDictionary!

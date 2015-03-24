@@ -63,13 +63,14 @@ class LoginViewController: UIViewController {
         self.view.userInteractionEnabled = false
     }
     
-    func loginCallback(data : NSDictionary)
+    func loginCallback(timer : NSTimer)
     {
-        
+        var data = timer.userInfo as NSDictionary!
         var spinner = CBSpinner.sharedSpinner() as CBSpinner!
         spinner.removeFromSuperview()
         self.view.userInteractionEnabled = true
         
+        println("data = \(data)")
         if (data.objectForKey("status")?.intValue == 200)
         {
             // TODO:
